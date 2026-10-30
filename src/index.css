@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  --color-ivory: #F7F5EF;
+  --color-linen: #EEEAE0;
+  --color-linen-hover: #E7E2D6;
+  --color-chalk: #DCDDD2;
+  --color-charcoal: #292C27;
+  --color-stone: #70736A;
+  --color-olive: #35483B;
+  --color-olive-dark: #27362C;
+  --color-terracotta: #C58F78;
+  --color-sage: #A8B5A0;
+  --color-sage-light: #E2E8DE;
+}
+
+@layer base {
+  body {
+    background-color: #F7F5EF;
+    color: #292C27;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom hairline borders and scholarly details */
+.border-chalk {
+  border-color: #DCDDD2;
+}
+
+.bg-ivory {
+  background-color: #F7F5EF;
+}
+
+.bg-linen {
+  background-color: #EEEAE0;
+}
+
+.text-charcoal {
+  color: #292C27;
+}
+
+.text-stone {
+  color: #70736A;
+}
+
+.text-olive {
+  color: #35483B;
+}
+
+.bg-olive {
+  background-color: #35483B;
+}
+
+.text-terracotta {
+  color: #C58F78;
+}
+
+.border-terracotta {
+  border-color: #C58F78;
+}
+
+/* Editorial underline link */
+.editorial-link {
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.editorial-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #C58F78;
+  transition: height 0.15s ease, opacity 0.15s ease;
+}
+
+.editorial-link:hover::after {
+  height: 2px;
+}
